@@ -13,14 +13,14 @@ const messageMap = {
   },
   "Network Error": {
     code: null,
-    message:
-      "Network Error: It was not possible to establish a connection with the server."
+    message: "Network Error: It was not possible to establish a connection with the server."
   }
 };
-
-export const mapErrorMessage = (error) => {
+export const mapErrorMessage = error => {
   const message = error.message;
-  return messageMap[message]
-    ? { ...messageMap[message] }
-    : { code: null, message };
+  return messageMap[message] ? { ...messageMap[message]
+  } : {
+    code: null,
+    message
+  };
 };
